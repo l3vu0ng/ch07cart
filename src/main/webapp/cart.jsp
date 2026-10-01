@@ -64,8 +64,13 @@
                 <input type="submit" value="Checkout">
             </form>
             <c:if test="${not empty cart and cart.count > 0}">
+                <form action="momo-pay" method="post" style="margin-right: 8px;">
+                    <input type="hidden" name="requestType" value="payWithATM">
+                    <input type="submit" value="Thanh toán MoMo (Thẻ ATM Test)" style="background-color: #a50064; color: white; font-weight: bold; border: none; padding: 8px 18px; border-radius: 4px; cursor: pointer;">
+                </form>
                 <form action="momo-pay" method="post">
-                    <input type="submit" value="Thanh toán MoMo Sandbox" style="background-color: #a50064; color: white; font-weight: bold; border: none; padding: 8px 18px; border-radius: 4px; cursor: pointer;">
+                    <input type="hidden" name="requestType" value="captureWallet">
+                    <input type="submit" value="Thanh toán MoMo (Quét mã QR App)" style="background-color: #d82d8b; color: white; font-weight: bold; border: none; padding: 8px 18px; border-radius: 4px; cursor: pointer;">
                 </form>
             </c:if>
         </div>

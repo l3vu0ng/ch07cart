@@ -16,8 +16,14 @@
                     <p>Tổng giá trị đơn hàng của bạn: <b style="color: #008080;">${cart.totalCurrencyFormat}</b></p>
                     <div class="btn-group">
                         <form action="momo-pay" method="post" style="margin-bottom: 8px;">
-                            <input type="submit" value="Thanh toán qua Ví MoMo Sandbox"
+                            <input type="hidden" name="requestType" value="payWithATM">
+                            <input type="submit" value="Thanh toán MoMo (Thẻ ATM Test)"
                                 style="background-color: #a50064; color: white; font-weight: bold; border: none; padding: 8px 18px; border-radius: 4px; cursor: pointer;">
+                        </form>
+                        <form action="momo-pay" method="post" style="margin-bottom: 8px;">
+                            <input type="hidden" name="requestType" value="captureWallet">
+                            <input type="submit" value="Thanh toán MoMo (Quét mã QR App)"
+                                style="background-color: #d82d8b; color: white; font-weight: bold; border: none; padding: 8px 18px; border-radius: 4px; cursor: pointer;">
                         </form>
                         <form action="cart" method="post">
                             <input type="hidden" name="action" value="cart">

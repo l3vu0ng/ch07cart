@@ -51,7 +51,10 @@ public class MoMoPaymentServlet extends HttpServlet {
         String orderInfo = "Thanh toan don hang #" + orderId;
         String redirectUrl = MoMoConfig.getRedirectUrl(request);
         String ipnUrl = MoMoConfig.getIpnUrl(request);
-        String requestType = "captureWallet";
+        String requestType = request.getParameter("requestType");
+        if (requestType == null || requestType.trim().isEmpty()) {
+            requestType = "payWithATM"; // Mặc định chuyển sang giao diện nhập thẻ ATM Test trên web
+        }
         String extraData = "";
 
         // Tạo raw signature theo đúng chuẩn MoMo AIO v2 (thứ tự chữ cái A-Z)
