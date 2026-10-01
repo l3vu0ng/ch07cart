@@ -40,6 +40,12 @@
             </c:forEach>
         </table>
 
+        <c:if test="${not empty errorMessage}">
+            <p style="color: red; font-weight: bold; padding: 10px; background-color: #ffebee; border: 1px solid #f44336; border-radius: 4px; max-width: 750px;">
+                ${errorMessage}
+            </p>
+        </c:if>
+
         <c:if test="${not empty cart and cart.count > 0}">
             <p style="max-width: 750px; text-align: right; font-size: 1.15em; font-weight: bold; margin-top: 15px;">
                 Tổng tiền: <span style="color: #008080;">${cart.totalCurrencyFormat}</span>
@@ -58,8 +64,8 @@
                 <input type="submit" value="Checkout">
             </form>
             <c:if test="${not empty cart and cart.count > 0}">
-                <form action="vnpay-pay" method="post">
-                    <input type="submit" value="Thanh toán qua VNPay Sandbox" style="background-color: #e51f28; color: white; font-weight: bold; border: none; padding: 7px 16px; border-radius: 4px; cursor: pointer;">
+                <form action="momo-pay" method="post">
+                    <input type="submit" value="Thanh toán MoMo Sandbox" style="background-color: #a50064; color: white; font-weight: bold; border: none; padding: 8px 18px; border-radius: 4px; cursor: pointer;">
                 </form>
             </c:if>
         </div>
