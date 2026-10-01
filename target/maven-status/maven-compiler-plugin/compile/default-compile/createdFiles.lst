@@ -1,7 +1,0 @@
-com\mycompany\ch07cart\JakartaRestConfiguration.class
-com\mycompany\ch07cart\resources\JakartaEE11Resource.class
-murach\business\Product.class
-CartServlet\CartServlet.class
-murach\business\Cart.class
-murach\business\LineItem.class
-murach\data\ProductIO.class
