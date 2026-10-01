@@ -19,6 +19,23 @@ public class Cart implements Serializable {
         return items.size();
     }
 
+    public double getTotal() {
+        double total = 0.0;
+        for (LineItem item : items) {
+            total += item.getTotal();
+        }
+        return total;
+    }
+
+    public String getTotalCurrencyFormat() {
+        java.text.NumberFormat currency = java.text.NumberFormat.getCurrencyInstance();
+        return currency.format(this.getTotal());
+    }
+
+    public void clear() {
+        items.clear();
+    }
+
     public void addItem(LineItem item) {
         String code = item.getProduct().getCode();
         int quantity = item.getQuantity();

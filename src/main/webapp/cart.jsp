@@ -40,6 +40,12 @@
             </c:forEach>
         </table>
 
+        <c:if test="${not empty cart and cart.count > 0}">
+            <p style="max-width: 750px; text-align: right; font-size: 1.15em; font-weight: bold; margin-top: 15px;">
+                Tổng tiền: <span style="color: #008080;">${cart.totalCurrencyFormat}</span>
+            </p>
+        </c:if>
+
         <p><b>To change the quantity</b>, enter the new quantity and click on the Update button.</p>
 
         <div class="btn-group">
@@ -51,6 +57,11 @@
                 <input type="hidden" name="action" value="checkOut">
                 <input type="submit" value="Checkout">
             </form>
+            <c:if test="${not empty cart and cart.count > 0}">
+                <form action="vnpay-pay" method="post">
+                    <input type="submit" value="Thanh toán qua VNPay Sandbox" style="background-color: #e51f28; color: white; font-weight: bold; border: none; padding: 7px 16px; border-radius: 4px; cursor: pointer;">
+                </form>
+            </c:if>
         </div>
     </body>
 </html>
