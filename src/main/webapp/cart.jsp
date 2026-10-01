@@ -72,6 +72,30 @@
                     <input type="hidden" name="requestType" value="captureWallet">
                     <input type="submit" value="Thanh toán MoMo (Quét mã QR App)" style="background-color: #d82d8b; color: white; font-weight: bold; border: none; padding: 8px 18px; border-radius: 4px; cursor: pointer;">
                 </form>
+
+                <div style="margin-top: 25px; max-width: 650px; background-color: #fdf8fb; border: 1px dashed #d82d8b; border-radius: 6px; padding: 12px 18px; color: #444; font-size: 10pt;">
+                    <div style="font-weight: bold; color: #a50064; margin-bottom: 8px; font-size: 10.5pt;">
+                        💳 Thông tin thẻ thử nghiệm MoMo Sandbox (Dùng để test):
+                    </div>
+                    <table style="width: 100%; border: none; font-size: 9.5pt; background: transparent; max-width: none;">
+                        <tr style="border: none;">
+                            <td style="border: none; padding: 4px 6px; width: 25%;"><b>Số thẻ:</b></td>
+                            <td style="border: none; padding: 4px 6px; font-family: monospace; color: #a50064; font-weight: bold;">9704 0000 0000 0018</td>
+                            <td style="border: none; padding: 4px 6px; width: 25%;"><b>Ngày phát hành:</b></td>
+                            <td style="border: none; padding: 4px 6px; font-family: monospace;">03/07</td>
+                        </tr>
+                        <tr style="border: none;">
+                            <td style="border: none; padding: 4px 6px;"><b>Tên chủ thẻ:</b></td>
+                            <td style="border: none; padding: 4px 6px; font-family: monospace;">NGUYEN VAN A</td>
+                            <td style="border: none; padding: 4px 6px;"><b>Số điện thoại:</b></td>
+                            <td style="border: none; padding: 4px 6px; font-family: monospace;">0988888888</td>
+                        </tr>
+                        <tr style="border: none;">
+                            <td style="border: none; padding: 4px 6px;"><b>Mã OTP:</b></td>
+                            <td colspan="3" style="border: none; padding: 4px 6px; font-family: monospace; color: #d82d8b; font-weight: bold; font-size: 11pt;">OTP</td>
+                        </tr>
+                    </table>
+                </div>
             </c:if>
         </div>
     </body>
